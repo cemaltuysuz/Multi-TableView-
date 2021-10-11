@@ -62,5 +62,14 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
         }
         return cell!
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView == noteBookTableView {
+            print("Selected noteBook item : \(noteBooks[indexPath.row])")
+        }
+        else if tableView == phoneTableView{
+            print("Selected phone item : \(phones[indexPath.row])")
+        }
+    }
 }
 
